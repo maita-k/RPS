@@ -3,8 +3,9 @@ using System;
 class Program {
 
 public static string myTurn() {
-  string x = Console.ReadLine();
-  return x;
+    Console.WriteLine("Enter your move!");
+    string x = Console.ReadLine();
+    return x;
 }
 
 public static string yourTurn(string[]plays) {
@@ -34,12 +35,15 @@ public static bool gameOn(string me, string you, string[]plays){
       
       string me =myTurn();
       string you=yourTurn(plays);
-
+      Console.WriteLine("Opponent played: "+you);
       bool game= gameOn(me, you,plays);
-      Console.WriteLine(you );
-      Console.WriteLine(game.ToString() );
+      
+      if (game){ Console.WriteLine("You win!") ;  }
+      else{ Console.WriteLine("You lose..."); }
+        
+      }
+      
       }
       
 
 
-  }
